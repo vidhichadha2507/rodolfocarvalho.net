@@ -4,17 +4,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+    <meta name="description" content="Rodolfo Henrique Carvalho's homepage">
+    <meta name="author" content="Rodolfo Henrique Carvalho">
+    <!-- <link rel="shortcut icon" href="favicon.png"> -->
 
-    <title>Fixed Top Navbar Example for Bootstrap</title>
+    <title>Rodolfo Carvalho</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 
+    <!-- more icons -->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
     <!-- Custom styles for this template -->
-    <link href="navbar-fixed-top.css" rel="stylesheet">
+    <link href="navbar-static-top.css" rel="stylesheet">
+
+    <!-- flag-sprites.com -->
+    <link href="flags.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -25,8 +31,8 @@
 
   <body>
 
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top">
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -34,30 +40,25 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="/">Rodolfo Carvalho</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <!-- <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li> -->
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list"></span> Projects <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
+                <li><a href="#project/xmppvox">XMPPVOX</a></li>
+                <li><a href="#project/shenmeci">Shenmeci</a></li>
+                <li><a href="#project/elephant-tracker">elephant-tracker</a></li>
+                <li><a href="#project/dawgo">DAWGo</a></li>
+                <li><a href="#project/dojorio">Coding Dojo Rio</a></li>
+                <li><a href="#project/kwoonbj">Coding Kwoon Beijing</a></li>
               </ul>
             </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="../navbar/">Default</a></li>
-            <li><a href="../navbar-static-top/">Static top</a></li>
-            <li class="active"><a href="./">Fixed top</a></li>
+            <li><a href="http://blog.rodolfocarvalho.net"><span class="glyphicon glyphicon-edit"></span> Blog</a></li>
+            <li><a href="#about"><span class="glyphicon glyphicon-user"></span> About</a></li>
+            <!-- <li><a href="/pt-br"><span class="glyphicon flag flag-br"></span> Português</a></li> -->
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -65,14 +66,143 @@
 
     <div class="container">
 
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
+      <p class="lead">This is my minimal homepage<small>, here you can find links to some of my projects and my online presence.</small></p>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-sm-2">
+          <small class="text-muted">Code</small><br>
+          <ul class="list-inline">
+            <li><a href="https://github.com/rhcarvalho"><i class="icon-github-sign"></i> GitHub</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <small class="text-muted">Talks</small><br>
+          <ul class="list-inline">
+            <li><a href="https://www.slideshare.net/rhcarvalho"><i class="icon-desktop"></i> Slideshare</a></li>
+            <li><a href="https://github.com/rhcarvalho/talks"><i class="icon-comment"></i> Talks@GitHub</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-6">
+          <small class="text-muted">Social</small><br>
+          <ul class="list-inline">
+            <li><a href="https://www.linkedin.com/profile/view?id=207965695"><i class="icon-linkedin-sign"></i> LinkedIn</a></li>
+            <li><a href="https://twitter.com/201"><i class="icon-twitter-sign"></i> Twitter</a></li>
+            <li><a href="https://www.facebook.com/rodolfocarvalho.net"><i class="icon-facebook-sign"></i> Facebook</a></li>
+            <li><a href="https://plus.google.com/u/0/108850839842049357061"><i class="icon-google-plus-sign"></i> Google+</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 id="projects" class="panel-title">Projects</h3>
+        </div>
+        <div class="panel-body">
+          <p>Selected list of some personal projects.</p>
+           <div class="row">
+             <div class="col-md-6">
+               <div class="panel panel-info">
+                 <div class="panel-heading">
+                   <h3 id="project/xmppvox" class="panel-title">XMPPVOX</h3>
+                 </div>
+                 <div class="panel-body">
+                   <p><a href="http://xmppvox.rodolfocarvalho.net">XMPPVOX</a> is a chat client for blind computer users.</p>
+                   <p><img src="imgs/xmppvox.png" alt="XMPPVOX screenshot" class="img-responsive img-thumbnail"></p>
+                   <p>It literally breaks barries, as it enables visually impaired people to communicate with their peers in a transparent way, by means of Text-to-Speech and a specially-crafted command interface.</p>
+                   <p>With XMPPVOX, it doesn't matter whether you're blind or not, nor whether you're talking to someone who also uses XMPPVOX or any other chat client.</p>
+                   <p>Behind the scenes, it is multiplatform adhoc-proprietary-protocol-to-XMPP bridge that connects <a href="http://intervox.nce.ufrj.br/dosvox/">DOSVOX</a> users to XMPP networks. Since DOSVOX is available on Windows only, XMPPVOX is currently distributed as a single Windows executable.</p>
+                 </div>
+               </div>
+             </div>
+             <div class="col-md-6">
+               <div class="panel panel-info">
+                 <div class="panel-heading">
+                   <h3 id="project/shenmeci" class="panel-title">Shenmeci</h3>
+                 </div>
+                 <div class="panel-body">
+                   <p><a href="http://shenmeci.rodolfocarvalho.net">Shenmeci</a> is a Chinese-English-Chinese online dictionary.</p>
+                   <p><img src="imgs/shenmeci.png" alt="Shenmeci screenshot" class="img-responsive img-thumbnail"></p>
+                   <p>With Chinese text as input, it does a dictionary based word segmentation (Chinese has no whitespace) and provides translation for each word.</p>
+                   <p>For non-Chinese input it searches for entries in the dictionary quickly using a full-text index.</p>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <div class="row">
+             <div class="col-md-6">
+               <div class="panel panel-info">
+                 <div class="panel-heading">
+                   <h3 id="project/elephant-tracker" class="panel-title">elephant-tracker</h3>
+                 </div>
+                 <div class="panel-body">
+                   <p><a href="https://github.com/rhcarvalho/elephant-tracker">elephant-tracker</a> is a usage tracker.</p>
+                   <p style="font-size: 72pt; line-height: 0.9; white-space: nowrap;">
+                     <span class="glyphicon glyphicon-stats"></span><span class="glyphicon glyphicon-stats"></span><span class="glyphicon glyphicon-stats"></span>
+                   </p>
+                   <p>It is a web server companion for <a href="#project/xmppvox">XMPPVOX</a>, keeping information about how XMPPVOX is being used.</p>
+                 </div>
+               </div>
+             </div>
+             <div class="col-md-6">
+               <div class="panel panel-info">
+                 <div class="panel-heading">
+                   <h3 id="project/dawgo" class="panel-title">DAWGo</h3>
+                 </div>
+                 <div class="panel-body">
+                   <p><a href="https://github.com/rhcarvalho/DAWGo">DAWGo</a> is a Directed Acyclic Word Graph library.</p>
+                   <p><img src="imgs/dawgo.png" alt="Directed Acyclic Word Graph example" class="img-responsive img-thumbnail"></p>
+                   <p>It is used in <a href="#project/shenmeci">Shenmeci</a> to build the Chinese word segmentation engine.</p>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <div class="row">
+             <div class="col-md-6">
+               <div class="panel panel-info">
+                 <div class="panel-heading">
+                   <h3 id="project/dojorio" class="panel-title">Coding Dojo Rio</h3>
+                 </div>
+                 <div class="panel-body">
+                   <p>Started in late 2008, this is pure reason to smile :-)</p>
+                   <p><img src="imgs/dojorio.jpg" alt="Coding Dojo Rio party time" class="img-responsive img-thumbnail"></p>
+                   <p><a href="http://dojorio.org">DojoRio</a> is the first open Coding Dojo group in the state of Rio de Janeiro, Brazil. It grew big, has had several branches in the city and state, and even influenced the creation of new Coding Dojos around Brazil and the world!</p>
+                 </div>
+               </div>
+             </div>
+             <div class="col-md-6">
+               <div class="panel panel-info">
+                 <div class="panel-heading">
+                   <h3 id="project/kwoonbj" class="panel-title">Coding Kwoon Beijing</h3>
+                 </div>
+                 <div class="panel-body">
+                   <p>Started in 2013, early-stage social project in Beijing.</p>
+                   <p><img src="imgs/codingkwoon.jpg" alt="Coding Kwoon" class="img-responsive img-thumbnail"></p>
+                   <p>This is an effort to spread the Coding Dojo culture in Beijing, China.</p>
+                 </div>
+               </div>
+             </div>
+           </div>
+        </div>
+      </div>
+
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 id="about" class="panel-title">About</h3>
+        </div>
+        <div class="panel-body">
+          <span class="media"><img src="imgs/rodolfo_carvalho.jpg" alt="Rodolfo Carvalho" class="img-responsive img-thumbnail pull-left"></span>
+          <p>Rodolfo is a <a href="http://www.poli.ufrj.br/">Computer and Information Engineer</a>, passionate about software development, and fascinated by this imense world.</p>
+          <p>Born in Rio de Janeiro, he's happy and grateful for having lived abroad in Lisbon, Kraków and Beijing, and visited several other cities.</p>
+          <p>Son of the best mother in the world, he likes sports, nature and exploring cities in unconventional ways.</p>
+          <p>As a craftsman, he builds his own tools. When need arises, he can learn and can teach as well.</p>
+          <p>For him, technology must be used for the betterment of the world. With a computer at hand, he is a polyglot, loves coding in <a href="http://python.org/">Python</a>, <a href="http://golang.org/">Go</a>, <a href="http://racket-lang.org/">Racket</a>, or anything else to solve meaningful problems. <a href="https://www.sqlite.org/">SQLite</a> or <a href="http://www.mongodb.org/">MongoDB</a>? Yeah, he knows when to pick what.</p>
+          <p>He believes that <a href="http://smallactsmanifesto.org/">small acts make great revolutions</a>. His Agile mindset towards project management and development  values people first.</p>
+          <p>Uh, Rodolfo also enjoys photography and spoken languages.</p>
+        </div>
       </div>
 
     </div> <!-- /container -->
