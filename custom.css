@@ -1,9 +1,10 @@
 body {
   padding-bottom: 300px;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.navbar-static-top {
-  margin-bottom: 19px;
+p {
+  font-family: Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .panel-default {
@@ -16,8 +17,11 @@ body {
   border-color: #468;
 }
 
+#links {
+  margin-bottom: 20px;
+}
+
 #about .panel-body {
-  font-family: Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.6em;
   line-height: 1.5em;
 }
@@ -40,8 +44,4 @@ body {
     float: none !important;
     text-align: center;
   }
-}
-
-#projects .panel-body .panel-body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
