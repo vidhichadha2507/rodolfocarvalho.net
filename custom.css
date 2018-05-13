@@ -45,3 +45,7 @@ p {
     text-align: center;
   }
 }
+
+#projects .row .panel-body p {
+  font-size: 1.3em;
+}
