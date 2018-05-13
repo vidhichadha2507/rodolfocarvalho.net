@@ -22,8 +22,12 @@ p {
 }
 
 #about .panel-body {
-  font-size: 1.6em;
-  line-height: 1.5em;
+  font-size: 1.7em;
+  line-height: 1.6em;
+}
+
+#about .panel-body p {
+  margin: 0 0 0.8em;
 }
 
 #about .panel-body img {
@@ -37,6 +41,10 @@ p {
 
 #about .panel-body .pull-right {
   margin-left: 15px;
+}
+
+#about .panel-body hr {
+  clear: both;
 }
 
 @media (max-width: 767px) {
