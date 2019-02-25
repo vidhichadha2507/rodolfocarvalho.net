@@ -7,4 +7,6 @@ set -o pipefail
 # Run Hugo development server publishing drafts to a custom location to
 # facilitate working on new content.
 ROOT_DIR="$(dirname "$0")/.."
-exec hugo server -wDs "$ROOT_DIR" -d "$ROOT_DIR/dev" "$@"
+DEV_DIR="$ROOT_DIR/dev"
+rm -rf "$DEV_DIR"
+exec hugo server -wDs "$ROOT_DIR" -d "$DEV_DIR" "$@"
