@@ -1,0 +1,16 @@
+#!/bin/sh
+# Create a content file for a new post.
+#
+# Usage: bin/new-post SLUG
+#
+# The new file will be at content/posts/YEAR/MONTH/DAY-SLUG.md.
+
+set -o errexit
+set -o nounset
+set -o pipefail
+
+ROOT_DIR="$(dirname "$0")/.."
+SLUG="${1%.md}"
+YYYY_MM_DD="$(date '+%Y/%m/%d')"
+
+hugo -s "$ROOT_DIR" new "blog/$YYYY_MM_DD-$SLUG.md"

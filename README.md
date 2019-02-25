@@ -17,6 +17,16 @@ The live rendered website will be rendered to `${TMPDIR-/tmp}/hugo-rodolfocarval
 The server will watch for file changes and re-render automatically.  
 The browser should also refresh the page automatically.
 
+### Adding a new blog post
+
+Run:
+
+```
+bin/new-post SLUG
+```
+
+A new file will be created at `content/posts/YEAR/MONTH/DAY-SLUG.md`.
+
 ### Deployment
 
 Build for publishing:
