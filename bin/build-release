@@ -7,12 +7,12 @@ set -o pipefail
 
 ROOT_DIR="$(dirname "$0")/.."
 PUBLIC_DIR="$ROOT_DIR/public"
-OUTPUT_DIR="$(mktemp -d "$PUBLIC_DIR".XXXX.tmp)"
-hugo -s "$ROOT_DIR" -d "$OUTPUT_DIR" "$@"
+OUT_DIR="$(mktemp -d --tmpdir hugo-rodolfocarvalho.net-RELEASE-XXXX)"
+hugo -s "$ROOT_DIR" -d "$OUT_DIR" "$@"
 (
   cd "$ROOT_DIR"
   git rm -rqf --ignore-unmatch -- "$PUBLIC_DIR"
-  mv --no-clobber -- "$OUTPUT_DIR" "$PUBLIC_DIR"
+  mv --no-clobber -- "$OUT_DIR" "$PUBLIC_DIR"
   git add -- "$PUBLIC_DIR"
 )
 "$ROOT_DIR/bin/gen-readme" -i

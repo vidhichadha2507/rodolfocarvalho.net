@@ -8,6 +8,7 @@ set -o nounset
 set -o pipefail
 
 ROOT_DIR="$(dirname "$0")/.."
-DEV_DIR="$ROOT_DIR/dev"
-rm -rf "$DEV_DIR"
-exec hugo server -wDs "$ROOT_DIR" -d "$DEV_DIR" "$@"
+OUT_DIR="$(mktemp -d --tmpdir hugo-rodolfocarvalho.net-DEV-XXXX)"
+trap "rm -rf \"$OUT_DIR\"" EXIT
+
+hugo server -wDs "$ROOT_DIR" -d "$OUT_DIR" "$@"
