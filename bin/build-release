@@ -1,10 +1,10 @@
 #!/bin/sh
+# Run Hugo to render website.
 
 set -o errexit
 set -o nounset
 set -o pipefail
 
-# Run Hugo to render website.
 ROOT_DIR="$(dirname "$0")/.."
 PUBLIC_DIR="$ROOT_DIR/public"
 OUTPUT_DIR="$(mktemp -d "$PUBLIC_DIR".XXXX.tmp)"

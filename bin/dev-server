@@ -1,11 +1,12 @@
 #!/bin/sh
+# Run Hugo development server publishing all content including drafts to a
+# temporary location to facilitate working on content by live inspecting the
+# output on a browser.
 
 set -o errexit
 set -o nounset
 set -o pipefail
 
-# Run Hugo development server publishing drafts to a custom location to
-# facilitate working on new content.
 ROOT_DIR="$(dirname "$0")/.."
 DEV_DIR="$ROOT_DIR/dev"
 rm -rf "$DEV_DIR"

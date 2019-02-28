@@ -1,13 +1,14 @@
 #!/bin/sh
+# Update the Hugo version in README.md with the current available version.
+#
+# If you are happy with the output, run again redirecting the output to
+# overwrite the README.md file, or pass the -i flag that is forwarded to sed to
+# change the README.md file in-place.
 
 set -o errexit
 set -o nounset
 set -o pipefail
 
-# Update the Hugo version in ../README.md with the current available version.
-#
-# If you are happy with the output, run again redirecting the output to
-# overwrite the README.md file, or pass the -i flag that is forwarded to sed.
 VERSION="$(hugo version | grep -om1 'v[0-9][^ ]\+')"
 README="$(dirname "$0")/../README.md"
 sed -e 's/\(<!-- hugo version -->\).*$/\1'"$VERSION"'/' "$@" "$README"
