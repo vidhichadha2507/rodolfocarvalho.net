@@ -11,4 +11,5 @@ set -o pipefail
 
 VERSION="$(hugo version | grep -om1 'v[0-9][^ ]\+')"
 README="$(dirname "$0")/../README.md"
+
 sed -e 's/\(<!-- hugo version -->\).*$/\1'"$VERSION"'/' "$@" "$README"
