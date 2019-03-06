@@ -14,6 +14,7 @@
 {{- end }}
 
 {{ define "main" -}}
+{{- $projects := sort $.Site.Data.projects "weight" "desc" -}}
 
   {{ `<!-- Static navbar -->` | safeHTML }}
   <div class="navbar navbar-default navbar-static-top">
@@ -33,16 +34,9 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list"></span> Projects <b class="caret"></b></a>
             <ul class="dropdown-menu">
-              <li><a href="#project/tiwe">Tiwe</a></li>
-              <li><a href="#project/dojo-brno">Coding Dojo Brno</a></li>
-              <li><a href="#project/redgreen">redgreen</a></li>
-              <li><a href="#project/typokiller">typokiller</a></li>
-              <li><a href="#project/xmppvox">XMPPVOX</a></li>
-              <li><a href="#project/shenmeci">Shenmeci</a></li>
-              <li><a href="#project/elephant-tracker">elephant-tracker</a></li>
-              <li><a href="#project/dawgo">DAWGo</a></li>
-              <li><a href="#project/dojorio">Coding Dojo Rio</a></li>
-              <li><a href="#project/kwoonbj">Coding Kwoon Beijing</a></li>
+              {{ range $projects -}}
+                <li><a href="#{{- partial "project-anchor.html" . | safeURL -}}">{{ .name }}</a></li>
+              {{ end }}
             </ul>
           </li>
         </ul>
@@ -125,7 +119,7 @@
       </div>
     </div>
 
-    {{ partial "projects-box.html" $.Site.Data.projects }}
+    {{ partial "projects-box.html" $projects }}
 
   </div> {{ `<!-- /container -->` | safeHTML }}
 

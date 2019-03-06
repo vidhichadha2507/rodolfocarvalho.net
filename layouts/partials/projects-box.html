@@ -5,7 +5,7 @@
     <h3 class="panel-title">A selected list of <strong>personal projects</strong></h3>
   </div>
   <div class="panel-body">
-{{ range $i, $p := sort . "weight" "desc" }}
+{{ range $i, $p := . }}
   {{- $i1 := add $i 1 -}}
   {{ if modBool $i $columnCount -}}
     <div class="row">
