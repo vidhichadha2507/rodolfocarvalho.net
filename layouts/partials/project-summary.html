@@ -1,0 +1,10 @@
+<div class="col-md-6">
+  <div id="project/{{ .anchor | default (.name | lower) }}" class="panel panel-info">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{ .name }}</h3>
+    </div>
+    <div class="panel-body">
+      {{ .description | markdownify }}
+    </div>
+  </div>
+</div>
