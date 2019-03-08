@@ -14,7 +14,7 @@
 {{- end }}
 
 {{ define "main" -}}
-{{- $projects := sort $.Site.Data.projects "weight" "desc" -}}
+{{- $projects := sort (($.Site.GetPage "/projects").Resources.ByType "page") "Params.weight" "desc" -}}
 
   {{ `<!-- Static navbar -->` | safeHTML }}
   <div class="navbar navbar-default navbar-static-top">
@@ -35,7 +35,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list"></span> Projects <b class="caret"></b></a>
             <ul class="dropdown-menu">
               {{ range $projects -}}
-                <li><a href="#{{- partial "project-anchor.html" . | safeURL -}}">{{ .name }}</a></li>
+                <li><a href="#{{- partial "project-anchor.html" . | safeURL -}}">{{ .Title }}</a></li>
               {{ end }}
             </ul>
           </li>
