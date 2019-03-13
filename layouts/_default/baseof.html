@@ -17,9 +17,9 @@
   {{ end }}
 </head>
 <body>
+  {{ partial "header.html" . }}
 
-  {{ block "main" . }}
-  {{ end }}
+  {{ block "main" . }}{{ end }}
 
 </body>
 </html>
