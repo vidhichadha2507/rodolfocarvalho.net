@@ -57,3 +57,7 @@ p {
 #projects .row .panel-body p {
   font-size: 1.3em;
 }
+
+#navbar-state:checked ~ .collapse {
+  display: block;
+}

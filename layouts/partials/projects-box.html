@@ -1,19 +1,21 @@
 {{- $projectCount := len . -}}
 {{- $columnCount := 2 -}}
-<div id="projects" class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">A selected list of <strong>personal projects</strong></h3>
-  </div>
-  <div class="panel-body">
-{{ range $i, $p := . }}
+
+<div class="panel-heading">
+  <h3 class="panel-title">A selected list of <strong>personal projects</strong></h3>
+</div>
+<div class="panel-body">
+{{ range $i, $p := . -}}
   {{- $i1 := add $i 1 -}}
-  {{ if modBool $i $columnCount -}}
-    <div class="row">
+  {{- $startRow := modBool $i $columnCount -}}
+  {{- $endRow := or (modBool $i1 $columnCount) (eq $i1 $projectCount) -}}
+
+  {{ if $startRow -}}
+  <div class="row">
   {{- end }}
-  {{ partial "project-summary.html" $p -}}
-  {{ if or (modBool $i1 $columnCount) (eq $i1 $projectCount) -}}
-    </div>
-  {{- end }}
-{{ end }}
+    {{ partial "project-summary.html" $p -}}
+  {{ if $endRow -}}
   </div>
-</div> {{ `<!-- /projects -->` | safeHTML }}
+  {{- end }}
+{{ end -}}
+</div>
