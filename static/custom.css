@@ -40,7 +40,3 @@ p {
 .homepage #projects .card-body p {
   font-size: 1.2rem;
 }
-
-#navbar-state:checked ~ .collapse {
-  display: block;
-}
