@@ -13,6 +13,8 @@
   {{ `<!-- Custom styles for this template -->` | safeHTML }}
   <link href="custom.css" rel="stylesheet">
 
+  {{ .Hugo.Generator }}
+
 {{- end }}
 
 {{ define "main" -}}
