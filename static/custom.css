@@ -7,55 +7,38 @@ p {
   font-family: Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.panel-default {
+.homepage .card,
+.homepage .card-header {
   border-color: #468;
 }
 
-.panel-default > .panel-heading {
-  color: #fff;
+.homepage .card-header {
+  color: #f5f5f5;
   background-color: #357;
-  border-color: #468;
 }
 
-#links {
-  margin-bottom: 20px;
-}
-
-#about .panel-body {
-  font-size: 1.7em;
+.homepage #about .card-body p {
+  font-size: 1.4rem;
   line-height: 1.6em;
 }
 
-#about .panel-body p {
-  margin: 0 0 0.8em;
+.homepage #about img {
+  width: 180px;
+  height: 240px;
 }
 
-#about .panel-body img {
-  width: 210px;
-  height: 280px;
+.homepage #projects .card-body .card,
+.homepage #projects .card-body .card-header {
+  border-color: #bce8f1;
 }
 
-#about .panel-body .pull-left {
-  margin-right: 15px;
+.homepage #projects .card-body .card-header {
+  color: #31708f;
+  background-color: #d9edf7;
 }
 
-#about .panel-body .pull-right {
-  margin-left: 15px;
-}
-
-#about .panel-body hr {
-  clear: both;
-}
-
-@media (max-width: 767px) {
-  #about .panel-body .pull-left, #about .panel-body .pull-right {
-    float: none !important;
-    text-align: center;
-  }
-}
-
-#projects .row .panel-body p {
-  font-size: 1.3em;
+.homepage #projects .card-body p {
+  font-size: 1.2rem;
 }
 
 #navbar-state:checked ~ .collapse {

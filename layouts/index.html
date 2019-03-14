@@ -1,7 +1,7 @@
 {{ define "extra-head" -}}
 
-  {{ `<!-- Compiled and minified CSS -->` | safeHTML }}
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  {{ `<!-- Compiled and minified Bootstrap CSS -->` | safeHTML }}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   {{ `<!-- Font Awesome icons -->` | safeHTML }}
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/solid.css" integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B" crossorigin="anonymous">
@@ -18,60 +18,62 @@
 {{ define "main" -}}
 {{- $projects := sort (($.Site.GetPage "/projects").Resources.ByType "page") "Params.weight" "desc" -}}
 
-  <div class="container">
+  <div class="container homepage">
 
-    <div id="about" class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">About</h3>
-      </div>
-      <div class="panel-body">
-        <p class="pull-left"><img src="imgs/rodolfo_carvalho.jpg" alt="Rodolfo Carvalho" class="img-responsive img-thumbnail"></p>
-        <p>Rodolfo is a <a href="http://www.poli.ufrj.br/">Computer and
-          Information Engineer</a> <strong>passionate</strong> about software
-          development and sharing of knowledge.</p>
-        <p>His superpowers include insisting on <strong>high standards</strong>
-          and <strong>diving deep</strong>.</p>
-        <p>Born in <a href="https://en.wikipedia.org/wiki/Rio_de_Janeiro">Rio de
-          Janeiro</a>, <strong>curious</strong> and <strong>fascinated</strong>
-          by this immense world, he's happy and grateful for having lived in
-          <a href="https://en.wikipedia.org/wiki/Lisbon">Lisbon</a>,
-          <a href="https://en.wikipedia.org/wiki/Beijing">Beijing</a>,
-          <a href="https://en.wikipedia.org/wiki/Krak%C3%B3w">Kraków</a>,
-          <a href="https://en.wikipedia.org/wiki/Brno">Brno</a> and
-          <a href="https://en.wikipedia.org/wiki/Portland,_Oregon">Portland</a>!<br>
-          Let the list keep growing!</p>
+    <div class="card mb-4" id="about">
+      <h2 class="card-header h6">About</h2>
+      <div class="card-body">
+        <div class="clearfix">
+          <p class="float-md-left text-center"><img class="img-thumbnail mr-3" src="imgs/rodolfo_carvalho.jpg" alt="Rodolfo Carvalho"></p>
+          <p>Rodolfo is a <a href="http://www.poli.ufrj.br/">Computer and
+            Information Engineer</a> <strong>passionate</strong> about software
+            development and sharing of knowledge.</p>
+          <p>His superpowers include insisting on <strong>high standards</strong>
+            and <strong>diving deep</strong>.</p>
+          <p>Born in <a href="https://en.wikipedia.org/wiki/Rio_de_Janeiro">Rio de
+            Janeiro</a>, <strong>curious</strong> and <strong>fascinated</strong>
+            by this immense world, he's happy and grateful for having lived in
+            <a href="https://en.wikipedia.org/wiki/Lisbon">Lisbon</a>,
+            <a href="https://en.wikipedia.org/wiki/Beijing">Beijing</a>,
+            <a href="https://en.wikipedia.org/wiki/Krak%C3%B3w">Kraków</a>,
+            <a href="https://en.wikipedia.org/wiki/Brno">Brno</a> and
+            <a href="https://en.wikipedia.org/wiki/Portland,_Oregon">Portland</a>!<br>
+            Let the list keep growing!</p>
+        </div>
         <hr>
-        <p class="pull-left"><img src="imgs/cycling.jpg" alt="Rodolfo cycling" class="img-responsive img-thumbnail"></p>
-        <p>Rodolfo likes sports, nature, exploring cities in unconventional ways
-          and learning languages. Currently enjoying Oregon's amazing bicycle
-          rides and hikes with his loved wife.</p>
-        <p>He believes that <strong>continuous learning</strong> is a must and
-          that technology is to be used for the betterment of the world. To that
-          end, <a href="http://smallactsmanifesto.org/">small acts make great
-          revolutions</a>.</p>
-        <p>He values <strong>people</strong> and obsesses over customers, while
-          appreciating <strong>correct</strong>, <strong>beautiful</strong> and
-          <strong>well-tested</strong> code.</p>
+        <div class="clearfix">
+          <p class="float-md-left text-center"><img class="img-thumbnail mr-3" src="imgs/cycling.jpg" alt="Rodolfo cycling"></p>
+          <p>Rodolfo likes sports, nature, exploring cities in unconventional ways
+            and learning languages. Currently enjoying Oregon's amazing bicycle
+            rides and hikes with his loved wife.</p>
+          <p>He believes that <strong>continuous learning</strong> is a must and
+            that technology is to be used for the betterment of the world. To that
+            end, <a href="http://smallactsmanifesto.org/">small acts make great
+            revolutions</a>.</p>
+          <p>He values <strong>people</strong> and obsesses over customers, while
+            appreciating <strong>correct</strong>, <strong>beautiful</strong> and
+            <strong>well-tested</strong> code.</p>
+        </div>
         <hr>
-        <p class="pull-left"><img src="imgs/rodolfo_redhat.jpg" alt="Rodolfo Carvalho" class="img-responsive img-thumbnail"></p>
-        <p>Polyglot, loves coding in
-          <a href="https://golang.org/">Go</a>,
-          <a href="https://python.org/">Python</a>,
-          <a href="https://racket-lang.org/">Racket</a> or anything else to solve meaningful problems.
-          Distributed systems and containers? <a href="https://github.com/openshift/origin">Check</a>.
-          Automation with <a href="https://www.ansible.com/">Ansible</a>? <a href="https://github.com/openshift/openshift-ansible">Check</a>.
-          Large global-scale SaaS? <a href="https://aws.amazon.com/mediastore/">Check</a>.</p>
-        <p>Rodolfo works on AWS Elemental MediaStore, a storage service
-          optimized for media that delivers predictable low latency.
-          Prior to that, he worked on multiple parts of OpenShift, Red Hat's
-          open source container platform and Kubernetes distribution.</p>
-        <p>He is often attending and giving talks in software community events.</p>
+        <div class="clearfix">
+          <p class="float-md-left text-center"><img class="img-thumbnail mr-3" src="imgs/rodolfo_redhat.jpg" alt="Rodolfo Carvalho"></p>
+          <p>Polyglot, loves coding in
+            <a href="https://golang.org/">Go</a>,
+            <a href="https://python.org/">Python</a>,
+            <a href="https://racket-lang.org/">Racket</a> or anything else to solve meaningful problems.
+            Distributed systems and containers? <a href="https://github.com/openshift/origin">Check</a>.
+            Automation with <a href="https://www.ansible.com/">Ansible</a>? <a href="https://github.com/openshift/openshift-ansible">Check</a>.
+            Large global-scale SaaS? <a href="https://aws.amazon.com/mediastore/">Check</a>.</p>
+          <p>Rodolfo works on AWS Elemental MediaStore, a storage service
+            optimized for media that delivers predictable low latency.
+            Prior to that, he worked on multiple parts of OpenShift, Red Hat's
+            open source container platform and Kubernetes distribution.</p>
+          <p>He is often attending and giving talks in software community events.</p>
+        </div>
       </div>
     </div>
 
-    <div id="projects" class="panel panel-default">
-      {{ partial "projects-box.html" $projects }}
-    </div> {{ `<!-- /projects -->` | safeHTML }}
+    {{ partial "projects-box.html" $projects }}
 
   </div> {{ `<!-- /container -->` | safeHTML }}
 

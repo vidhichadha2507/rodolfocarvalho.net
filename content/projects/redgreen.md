@@ -6,7 +6,7 @@ weight: 8
 [redgreen](https://github.com/rhcarvalho/redgreen) is your companion during
 [TDD](https://en.wikipedia.org/wiki/Test-driven_development) sessions.
 
-<img src="images/redgreen.png" alt="redgreen screenshot" class="img-responsive img-thumbnail">
+<img src="images/redgreen.png" alt="redgreen screenshot" class="img-thumbnail">
 
 This tool provides instantaneous feedback about the current state of a test
 suite, automatically triggered whenever a file changes. It shows a green or red
