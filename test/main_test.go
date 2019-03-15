@@ -90,6 +90,11 @@ var files = []RequiredFile{
 		MinBytes:    1024,
 	},
 	{
+		Path:        "blog/index.html",
+		ContentType: "text/html; charset=utf-8",
+		MinBytes:    1024,
+	},
+	{
 		Path:        "projects/index.html",
 		ContentType: "text/html; charset=utf-8",
 		MinBytes:    1024,

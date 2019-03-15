@@ -6,6 +6,9 @@ enableRobotsTXT = true
 disableAliases = true
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
+[permalinks]
+blog = "/:section/:slug/"
+
 [outputs]
 home = ["HTML", "HEADERS", "REDIRECTS"]
 page = ["HTML"]

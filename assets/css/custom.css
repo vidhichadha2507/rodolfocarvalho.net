@@ -2,7 +2,7 @@ body {
   font-family: "Open Sans", var(--font-family-sans-serif);
 }
 
-p {
+p, article li {
   font-family: "Ubuntu", var(--font-family-sans-serif);
 }
 
@@ -70,6 +70,13 @@ p {
       transparent 140px,
       var(--color-stripe-lg) 140px,
       var(--color-stripe-lg) 160px);
+}
+
+.bg-pattern-bluish {
+  --color-base: hsla(227,26%,75%,0.4);
+  --color-stripe-lg: hsla(219,66%,50%,0.4);
+  --color-stripe-md: hsla(206,70%,68%,0.4);
+  --color-stripe-sm: hsla(360,100%,100%,0.4);
 }
 
 .bg-pattern-greenish {

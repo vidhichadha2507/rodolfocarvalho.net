@@ -1,0 +1,6 @@
+<small class="text-muted">
+  <span class="d-inline d-md-none">Published on </span>
+  <time class="text-nowrap" {{ .Date.Format "2006-01-02T15:04:05Z07:00" | printf "datetime=%q" | safeHTMLAttr }}>
+    {{ .Date.Format "2006-01-02" }}
+  </time>
+</small>

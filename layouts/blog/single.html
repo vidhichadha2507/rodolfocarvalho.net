@@ -1,0 +1,51 @@
+{{ define "extra-head" }}
+<style>
+  article footer section:before {
+    content: "\22c4";
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--gray);
+  }
+
+  article footer section {
+    margin: 1rem 0;
+  }
+</style>
+{{ end }}
+
+{{ define "extra-header" }}
+<div class="bg-pattern bg-pattern-bluish rounded-lg mx-3 mb-3">
+  <div class="container py-2">
+    <a href="{{ .CurrentSection.RelPermalink }}"><h6 class="d-inline-block bg-white-80 rounded-lg m-0 px-4 py-1">{{ .CurrentSection.Title }}</h6></a>
+  </div>
+</div>
+{{ end }}
+
+{{ define "main" }}
+<article class="container">
+  <header class="d-md-flex flex-row justify-content-between align-items-baseline">
+    <h1 class="my-3 mr-md-3">{{ .Title }}</h1>
+    <p>{{ partial "blog/publication-date.html" . }}</p>
+  </header>
+  <section>
+    {{ .Content }}
+  </section>
+  <footer>
+    <section>
+      <p>See also:</p>
+      <ul>
+        {{ if .NextInSection }}
+        <li><a href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a></li>
+        {{ end }}
+        {{ if .PrevInSection }}
+        <li><a href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a></li>
+        {{ end }}
+      </ul>
+    </section>
+    <section>
+      {{ partial "blog/feedback-form.html" . }}
+    </section>
+  </footer>
+</article>
+{{ end }}
