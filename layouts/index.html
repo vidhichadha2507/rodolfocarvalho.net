@@ -18,12 +18,12 @@
 {{- end }}
 
 {{ define "main" -}}
-{{- $projects := sort (($.Site.GetPage "/projects").Resources.ByType "page") "Params.weight" "desc" -}}
 
   <div class="container homepage">
 
     {{ partial "about.html" }}
 
+    {{ $projects := sort (($.Site.GetPage "/projects").Resources.ByType "page") "Params.weight" "desc" -}}
     {{ partial "projects-box.html" $projects }}
 
   </div> {{ `<!-- /container -->` | safeHTML }}
