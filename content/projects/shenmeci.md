@@ -6,7 +6,7 @@ weight: 5
 [Shenmeci](http://shenmeci.rodolfocarvalho.net) is a Chinese-English-Chinese
 online dictionary.
 
-<img src="images/shenmeci.png" alt="Shenmeci screenshot" class="img-thumbnail">
+![Shenmeci screenshot](images/shenmeci.png)
 
 With Chinese text as input, it does a dictionary based word segmentation
 (Chinese has no whitespace) and provides translation for each word.

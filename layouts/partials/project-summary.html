@@ -4,7 +4,7 @@
       <a href="#{{- partial "project-anchor.html" . | safeURL -}}">{{ .Title }}</a>
     </h3>
     <div class="card-body">
-      {{ replace .Content `<img src="` `<img src="/projects/` | safeHTML }}
+      {{ replace .Content `<img src="` `<img class="img-thumbnail" src="/projects/` | safeHTML }}
     </div>
   </div>
 </div>

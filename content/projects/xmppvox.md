@@ -6,7 +6,7 @@ weight: 6
 [XMPPVOX](http://xmppvox.rodolfocarvalho.net) is a chat client for blind
 computer users.
 
-<img src="images/xmppvox.png" alt="XMPPVOX screenshot" class="img-thumbnail">
+![XMPPVOX screenshot](images/xmppvox.png)
 
 It literally breaks barries, as it enables visually impaired people to
 communicate with their peers in a transparent way, by means of Text-to-Speech

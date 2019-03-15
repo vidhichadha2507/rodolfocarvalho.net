@@ -7,7 +7,7 @@ weight: 2
 The [Coding Dojo Rio](https://dojorio.org) was started in late 2008 and is pure
 reason to smile :-)
 
-<img src="images/dojorio.jpg" alt="Coding Dojo Rio party time" class="img-thumbnail">
+![Coding Dojo Rio party time](images/dojorio.jpg)
 
 DojoRio is the first open Coding Dojo group in the state of Rio de Janeiro,
 Brazil. It grew big, has had several branches in the city and state, and even
