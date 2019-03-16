@@ -1,0 +1,12 @@
+[build]
+publish = "public"
+command = "hugo --minify && go test ./test"
+
+[build.environment]
+HUGO_VERSION = "0.54.0"
+
+[context.deploy-preview]
+command = "hugo --minify --buildFuture -b $DEPLOY_PRIME_URL && go test ./test"
+
+[context.branch-deploy]
+command = "hugo --minify -b $DEPLOY_PRIME_URL && go test ./test"

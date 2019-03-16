@@ -1,0 +1,18 @@
+#!/bin/sh
+# Run Hugo to render website.
+
+set -o errexit
+set -o nounset
+set -o pipefail
+
+ROOT_DIR="$(dirname "$0")/.."
+PUBLIC_DIR="$ROOT_DIR/public"
+OUT_DIR="$(mktemp -d --tmpdir hugo-rodolfocarvalho.net-RELEASE-XXXX)"
+
+hugo -s "$ROOT_DIR" -d "$OUT_DIR" "$@"
+rm -rf -- "$PUBLIC_DIR"
+mv --no-clobber -- "$OUT_DIR" "$PUBLIC_DIR"
+
+"$ROOT_DIR/bin/gen-readme" -i
+
+go test ./$ROOT_DIR/test

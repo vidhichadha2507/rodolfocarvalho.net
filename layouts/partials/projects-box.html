@@ -1,0 +1,21 @@
+{{- $projectCount := len . -}}
+{{- $columnCount := 2 -}}
+
+<div class="card mb-4" id="projects">
+  <h2 class="card-header h6">A selected list of <strong>personal projects</strong></h2>
+  <div class="card-body">
+  {{ range $i, $p := . -}}
+    {{- $i1 := add $i 1 -}}
+    {{- $startRow := modBool $i $columnCount -}}
+    {{- $endRow := or (modBool $i1 $columnCount) (eq $i1 $projectCount) -}}
+
+    {{ if $startRow -}}
+    <div class="row">
+    {{- end }}
+      {{ partial "project-summary.html" $p -}}
+    {{ if $endRow -}}
+    </div>
+    {{- end }}
+  {{ end -}}
+  </div>
+</div>

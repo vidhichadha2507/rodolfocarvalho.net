@@ -1,0 +1,14 @@
+#!/bin/sh
+# Run Hugo development server publishing all content including drafts to a
+# temporary location to facilitate working on content by live inspecting the
+# output on a browser.
+
+set -o errexit
+set -o nounset
+set -o pipefail
+
+ROOT_DIR="$(dirname "$0")/.."
+OUT_DIR="$(mktemp -d --tmpdir hugo-rodolfocarvalho.net-DEV-XXXX)"
+trap "rm -rf \"$OUT_DIR\"" EXIT
+
+hugo server -wDs "$ROOT_DIR" -d "$OUT_DIR" --minify "$@"
