@@ -1,5 +1,4 @@
 {{ define "extra-head" -}}
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/solid.css" integrity="sha384-r/k8YTFqmlOaqRkZuSiE9trsrDXkh07mRaoGBMoDcmA58OHILZPsk29i2BsFng1B" crossorigin="anonymous">
@@ -11,18 +10,13 @@
   <link href="custom.css" rel="stylesheet">
 
   {{ .Hugo.Generator }}
-
 {{- end }}
 
 {{ define "main" -}}
-
   <div class="container homepage">
-
     {{ partial "about.html" }}
 
     {{ $projects := sort (($.Site.GetPage "/projects").Resources.ByType "page") "Params.weight" "desc" -}}
     {{ partial "projects-box.html" $projects }}
-
   </div>
-
 {{- end }}

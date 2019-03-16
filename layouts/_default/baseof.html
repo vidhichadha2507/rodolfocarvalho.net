@@ -16,19 +16,12 @@
   <meta name="author" content="Rodolfo Henrique Carvalho">
   <link rel="canonical" href="{{ .Permalink }}">
 
-  <title>
-  {{- block "title" . -}}
-    {{- .Site.Title -}}
-  {{- end -}}
-  </title>
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 
-  {{ block "extra-head" . }}
-  {{ end }}
+  {{ block "extra-head" . }}{{ end }}
 </head>
 <body>
   {{ partial "header.html" . }}
-
   {{ block "main" . }}{{ end }}
-
 </body>
 </html>
