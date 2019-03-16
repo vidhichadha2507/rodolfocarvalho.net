@@ -11,4 +11,4 @@ ROOT_DIR="$(dirname "$0")/.."
 OUT_DIR="$(mktemp -d --tmpdir hugo-rodolfocarvalho.net-DEV-XXXX)"
 trap "rm -rf \"$OUT_DIR\"" EXIT
 
-hugo server -wDs "$ROOT_DIR" -d "$OUT_DIR" "$@"
+hugo server -wDs "$ROOT_DIR" -d "$OUT_DIR" --minify "$@"
