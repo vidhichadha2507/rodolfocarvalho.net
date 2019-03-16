@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+
+  <link rel="canonical" href="{{ .Permalink }}">
+
   <meta name="theme-color" content="#44a4be"><!-- toolbar color on Chrome for Android -->
   <meta name="mobile-web-app-capable" content="yes"><!-- fullscreen from homescreen Android -->
   <meta name="apple-mobile-web-app-capable" content="yes"><!-- fullscreen from homescreen iOS -->
@@ -12,12 +16,8 @@
   <link rel="icon" sizes="192x192" href="/touch-icon.png"><!-- homescreen icon Android -->
   <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- homescreen icon iOS -->
 
-  <meta name="description" content="Rodolfo Henrique Carvalho's homepage">
   <meta name="author" content="Rodolfo Henrique Carvalho">
-  <link rel="canonical" href="{{ .Permalink }}">
-
-  <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
-
+  {{ if .Description }}<meta name="description" content="{{ .Description }}">{{ end }}
   {{ block "extra-head" . }}{{ end }}
 </head>
 <body>
