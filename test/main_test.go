@@ -1,9 +1,11 @@
 package main
 
 import (
+	"bufio"
 	"net/http"
 	"os"
 	"path/filepath"
+	"regexp"
 	"testing"
 )
 
@@ -87,5 +89,18 @@ var files = []RequiredFile{
 func TestRequiredFiles(t *testing.T) {
 	for _, rf := range files {
 		t.Run(rf.Path, rf.Test)
+	}
+}
+
+func TestHomepageGenerator(t *testing.T) {
+	path := filepath.Join("..", "public", "index.html")
+	f, err := os.Open(path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	r := bufio.NewReader(f)
+	re := regexp.MustCompile(`<meta name="?generator"? content="Hugo 0.\d+(.\d+)?"[^>]*>`)
+	if ok := re.MatchReader(r); !ok {
+		t.Error("index.html missing Hugo's Generator metatag")
 	}
 }
