@@ -33,4 +33,4 @@ The website is deployed from
 The generated `public/` directory is not versioned.
 
 ---
-Powered by [Hugo](https://gohugo.io/). Latest version used: <!-- hugo version -->v0.54.0-B1A82C61
+Powered by [Hugo](https://gohugo.io/). Latest version used: <!-- hugo version -->v0.55.1-223B3C2E
