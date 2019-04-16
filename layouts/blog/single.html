@@ -1,5 +1,20 @@
 {{ define "extra-head" }}
 <style>
+  article h2 {
+    margin: 2.5rem 0 .5rem;
+  }
+
+  article blockquote {
+    background: rgba(0,0,0,.03);
+    border-left: .5rem solid var(--gray);
+    margin: 1rem .75rem;
+    padding: .75rem;
+  }
+
+  article blockquote p {
+    margin-bottom: 0;
+  }
+
   article footer section:before {
     content: "\22c4";
     display: block;

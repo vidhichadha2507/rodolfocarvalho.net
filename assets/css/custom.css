@@ -96,3 +96,11 @@ p, article li {
 .bg-white-80 {
   background-color: rgba(255,255,255,.8)
 }
+
+.footnote-ref::before {
+  content: '[';
+}
+
+.footnote-ref::after {
+  content: ']';
+}
