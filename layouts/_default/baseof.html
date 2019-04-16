@@ -29,9 +29,9 @@
   {{ block "extra-head" . }}{{ end }}
 </head>
 <body>
-  {{ partial "header.html" . }}
-  <main>
-    {{ block "main" . }}{{ end }}
-  </main>
+{{ partial "header.html" . }}
+<main>
+{{ block "main" . }}{{ end }}
+</main>
 </body>
 </html>
