@@ -3,10 +3,38 @@
 {{- end }}
 
 {{ define "main" -}}
-  <div class="container homepage">
-    {{ partial "about.html" }}
-
-    {{ $projects := sort (($.Site.GetPage "/projects").Resources.ByType "page") "Params.weight" "desc" -}}
-    {{ partial "projects-box.html" $projects }}
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">Hi, I am Rodolfo!</h1>
+    <p class="lead">Thank you for your visit.</p>
   </div>
+  <div class="d-md-flex flex-row-reverse justify-content-around">
+    <img class="rounded-lg" src="/imgs/rodolfo_redhat_sq.jpg" alt="Rodolfo Carvalho">
+    <div id="links">
+      <div class="d-flex flex-column justify-content-around h-100">
+        <section>
+          <h6 class="mb-0"><small class="text-muted">Code</small></h6>
+          <ul class="list-inline m-0">
+            <li class="list-inline-item mr-4"><a href="https://github.com/rhcarvalho"><i class="fab fa-github mr-1"></i>GitHub</a></li>
+          </ul>
+        </section>
+        <section>
+          <h6 class="mb-0"><small class="text-muted">Talks</small></h6>
+          <ul class="list-inline m-0">
+            <li class="list-inline-item mr-4"><a href="https://www.slideshare.net/rhcarvalho"><i class="fab fa-slideshare mr-1"></i>Slideshare</a></li>
+            <li class="list-inline-item mr-4"><a href="https://github.com/rhcarvalho/talks"><i class="fas fa-comment mr-1"></i>Talks@GitHub</a></li>
+          </ul>
+        </section>
+        <section>
+          <h6 class="mb-0"><small class="text-muted">Social</small></h6>
+          <ul class="list-inline m-0">
+            <li class="list-inline-item mr-4"><a href="https://www.linkedin.com/in/rhcarvalho/"><i class="fab fa-linkedin mr-1"></i>LinkedIn</a></li>
+            <li class="list-inline-item mr-4"><a href="https://www.facebook.com/rodolfocarvalho.net"><i class="fab fa-facebook mr-1"></i>Facebook</a></li>
+            <li class="list-inline-item mr-4"><a href="https://twitter.com/201"><i class="fab fa-twitter mr-1"></i>Twitter</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
 {{- end }}

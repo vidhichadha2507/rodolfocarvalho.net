@@ -1,0 +1,55 @@
+{{ define "extra-head" }}
+<style>
+  .card,
+  .card-header {
+    border-color: #468;
+  }
+
+  .card-header {
+    color: #f5f5f5;
+    background-color: #357;
+  }
+
+  .card-body p {
+    font-size: 1.2rem;
+  }
+
+  .card-body .card,
+  .card-body .card-header {
+    border-color: #bce8f1;
+  }
+
+  .card-body .card-header {
+    color: #31708f;
+    background-color: #d9edf7;
+  }
+</style>
+{{ end }}
+
+{{ define "main" }}
+{{ $projects := sort (($.Site.GetPage "/projects").Resources.ByType "page") "Params.weight" "desc" -}}
+{{ with $projects }}
+  {{- $projectCount := len . -}}
+  {{- $columnCount := 2 -}}
+  <div class="container">
+    <div class="card mb-4">
+      <h2 class="card-header h6">A selected list of <strong>personal projects</strong></h2>
+      <div class="card-body">
+      {{ range $i, $p := . -}}
+        {{- $i1 := add $i 1 -}}
+        {{- $startRow := modBool $i $columnCount -}}
+        {{- $endRow := or (modBool $i1 $columnCount) (eq $i1 $projectCount) -}}
+
+        {{ if $startRow -}}
+        <div class="row">
+        {{- end }}
+          {{ partial "project-summary.html" $p -}}
+        {{ if $endRow -}}
+        </div>
+        {{- end }}
+      {{ end -}}
+      </div>
+    </div>
+  </div>
+  {{ end }}
+{{ end }}

@@ -84,6 +84,16 @@ var files = []RequiredFile{
 		ContentType: "text/html; charset=utf-8",
 		MinBytes:    512 + 1, // Ensure > 512 bytes or browsers may ignore it
 	},
+	{
+		Path:        "about/index.html",
+		ContentType: "text/html; charset=utf-8",
+		MinBytes:    1024,
+	},
+	{
+		Path:        "projects/index.html",
+		ContentType: "text/html; charset=utf-8",
+		MinBytes:    1024,
+	},
 }
 
 func TestRequiredFiles(t *testing.T) {

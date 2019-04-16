@@ -1,0 +1,80 @@
+{{ define "extra-head" }}
+<style>
+  .card,
+  .card-header {
+    border-color: #468;
+  }
+
+  .card-header {
+    color: #f5f5f5;
+    background-color: #357;
+  }
+
+  .card-body p {
+    font-size: 1.4rem;
+    line-height: 1.6em;
+  }
+
+  .card-body img {
+    width: 180px;
+    height: 240px;
+  }
+</style>
+{{ end }}
+
+{{ define "main" }}
+<div class="container">
+  <div class="card mb-4">
+    <h2 class="card-header h6">About</h2>
+    <div class="card-body">
+      <div class="clearfix">
+        <p class="float-md-left text-center"><img class="img-thumbnail mr-3" src="/imgs/rodolfo_carvalho.jpg" alt="Rodolfo Carvalho"></p>
+        <p>Rodolfo is a <a href="https://en.wikipedia.org/wiki/Escola_Polit%C3%A9cnica_da_UFRJ">Computer and
+          Information Engineer</a> <strong>passionate</strong> about software
+          development and sharing of knowledge.</p>
+        <p>His superpowers include insisting on <strong>high standards</strong>
+          and <strong>diving deep</strong>.</p>
+        <p>Born in <a href="https://en.wikipedia.org/wiki/Rio_de_Janeiro">Rio de
+          Janeiro</a>, <strong>curious</strong> and <strong>fascinated</strong>
+          by this immense world, he's happy and grateful for having lived in
+          <a href="https://en.wikipedia.org/wiki/Lisbon">Lisbon</a>,
+          <a href="https://en.wikipedia.org/wiki/Beijing">Beijing</a>,
+          <a href="https://en.wikipedia.org/wiki/Krak%C3%B3w">Kraków</a>,
+          <a href="https://en.wikipedia.org/wiki/Brno">Brno</a> and
+          <a href="https://en.wikipedia.org/wiki/Portland,_Oregon">Portland</a>!<br>
+          Let the list keep growing!</p>
+      </div>
+      <hr>
+      <div class="clearfix">
+        <p class="float-md-left text-center"><img class="img-thumbnail mr-3" src="/imgs/cycling.jpg" alt="Rodolfo cycling"></p>
+        <p>Rodolfo likes sports, nature, exploring cities in unconventional ways
+          and learning languages. Currently enjoying Oregon's amazing bicycle
+          rides and hikes with his loved wife.</p>
+        <p>He believes that <strong>continuous learning</strong> is a must and
+          that technology is to be used for the betterment of the world. To that
+          end, <a href="http://smallactsmanifesto.org/">small acts make great
+          revolutions</a>.</p>
+        <p>He values <strong>people</strong> and obsesses over customers, while
+          appreciating <strong>correct</strong>, <strong>beautiful</strong> and
+          <strong>well-tested</strong> code.</p>
+      </div>
+      <hr>
+      <div class="clearfix">
+        <p class="float-md-left text-center"><img class="img-thumbnail mr-3" src="/imgs/rodolfo_redhat.jpg" alt="Rodolfo Carvalho"></p>
+        <p>Polyglot, loves coding in
+          <a href="https://golang.org/">Go</a>,
+          <a href="https://www.python.org/">Python</a>,
+          <a href="https://racket-lang.org/">Racket</a> or anything else to solve meaningful problems.
+          Distributed systems and containers? <a href="https://github.com/openshift/origin">Check</a>.
+          Automation with <a href="https://www.ansible.com/">Ansible</a>? <a href="https://github.com/openshift/openshift-ansible">Check</a>.
+          Large global-scale SaaS? <a href="https://aws.amazon.com/mediastore/">Check</a>.</p>
+        <p>Rodolfo works on AWS Elemental MediaStore, a storage service
+          optimized for media that delivers predictable low latency.
+          Prior to that, he worked on multiple parts of OpenShift, Red Hat's
+          open source container platform and Kubernetes distribution.</p>
+        <p>He is often attending and giving talks in software community events.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
