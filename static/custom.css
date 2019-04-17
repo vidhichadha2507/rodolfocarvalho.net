@@ -6,6 +6,14 @@ p {
   font-family: Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.navbar-toggler {
+  cursor: pointer;
+}
+
+.navbar-toggler:hover {
+  background-color: rgba(0,0,0,.05);
+}
+
 #navbar-state:checked ~ .collapse {
   display: block;
 }
