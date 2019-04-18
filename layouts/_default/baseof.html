@@ -31,7 +31,10 @@
   {{ block "extra-head" . }}{{ end }}
 </head>
 <body>
-{{ partial "header.html" . }}
+<header>
+{{ partial "nav.html" . }}
+{{ block "extra-header" . }}{{ end }}
+</header>
 <main>
 {{ block "main" . }}{{ end }}
 </main>
