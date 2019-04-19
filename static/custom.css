@@ -17,3 +17,75 @@ p {
 #navbar-state:checked ~ .collapse {
   display: block;
 }
+
+.bg-pattern { /* based on https://leaverou.github.io/css3patterns/#madras */
+  --color-base: hsl(34,53%,82%);
+  --color-stripe-lg: hsla(197,62%,11%,0.5);
+  --color-stripe-md: hsla(5,53%,63%,0.5);
+  --color-stripe-sm: hsla(35,91%,65%,0.5);
+  background-color: var(--color-base);
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      transparent 5px, var(--color-stripe-lg) 5px,
+      var(--color-stripe-lg) 10px, transparent 10px,
+      transparent 35px, var(--color-stripe-md) 35px,
+      var(--color-stripe-md) 40px, var(--color-stripe-lg) 40px,
+      var(--color-stripe-lg) 50px, transparent 50px,
+      transparent 60px,
+      var(--color-stripe-md) 60px,
+      var(--color-stripe-md) 70px,
+      var(--color-stripe-sm) 70px,
+      var(--color-stripe-sm) 80px,
+      transparent 80px,
+      transparent 90px,
+      var(--color-stripe-md) 90px,
+      var(--color-stripe-md) 110px,
+      transparent 110px,
+      transparent 120px,
+      var(--color-stripe-lg) 120px,
+      var(--color-stripe-lg) 140px),
+    repeating-linear-gradient(
+      135deg,
+      transparent 5px,
+      var(--color-stripe-lg) 5px,
+      var(--color-stripe-lg) 10px,
+      transparent 10px,
+      transparent 35px,
+      var(--color-stripe-md) 35px,
+      var(--color-stripe-md) 40px,
+      var(--color-stripe-lg) 40px,
+      var(--color-stripe-lg) 50px,
+      transparent 50px,
+      transparent 60px,
+      var(--color-stripe-md) 60px,
+      var(--color-stripe-md) 70px,
+      var(--color-stripe-sm) 70px,
+      var(--color-stripe-sm) 80px,
+      transparent 80px,
+      transparent 90px,
+      var(--color-stripe-md) 90px,
+      var(--color-stripe-md) 110px,
+      transparent 110px,
+      transparent 140px,
+      var(--color-stripe-lg) 140px,
+      var(--color-stripe-lg) 160px);
+}
+
+.bg-pattern-greenish {
+  --color-base: hsla(134,26%,75%,0.4);
+  --color-stripe-lg: hsla(120,66%,20%,0.4);
+  --color-stripe-md: hsla(104,70%,45%,0.4);
+  --color-stripe-sm: hsla(134,100%,60%,0.4);
+}
+
+.bg-pattern-yellowish {
+  --color-base: hsla(70,26%,75%,0.4);
+  --color-stripe-lg: hsla(50,66%,60%,0.4);
+  --color-stripe-md: hsla(42,30%,70%,0.4);
+  --color-stripe-sm: hsla(60,60%,80%,0.4);
+}
+
+.bg-white-80 {
+  background-color: rgba(255,255,255,.8)
+}
