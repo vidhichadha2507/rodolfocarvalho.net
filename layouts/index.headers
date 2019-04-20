@@ -1,0 +1,20 @@
+# Configure Netlify HTTP headers
+# https://www.netlify.com/docs/headers-and-basic-auth/
+
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: {{ if eq (getenv "CONTEXT") "production" -}}
+    strict-origin-when-cross-origin
+  {{- else -}}
+    same-origin
+  {{- end }}
+
+{{- /*
+  References:
+  https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
+  https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection
+  https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
+  https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
+*/ -}}

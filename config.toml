@@ -7,9 +7,15 @@ disableAliases = true
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [outputs]
-home = ["HTML", "REDIRECTS"]
+home = ["HTML", "HEADERS", "REDIRECTS"]
 page = ["HTML"]
 section = ["HTML"]
+
+[outputFormats.HEADERS]
+mediatype = "text/netlify"
+baseName = "_headers"
+isPlainText = true
+notAlternative = true
 
 [outputFormats.REDIRECTS]
 mediatype = "text/netlify"
