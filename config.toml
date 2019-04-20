@@ -2,6 +2,7 @@ baseURL = "https://www.rodolfocarvalho.net/"
 languageCode = "en"
 title = "Rodolfo Carvalho"
 
+enableRobotsTXT = true
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [outputs]
