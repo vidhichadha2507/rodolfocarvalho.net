@@ -1,0 +1,12 @@
+# Configure Netlify redirects
+# https://www.netlify.com/docs/redirects/
+
+# Redirect default Netlify subdomain to primary domain
+https://rodolfocarvalho.netlify.com/* https://www.rodolfocarvalho.net/:splat 301!
+
+# Redirects for page aliases
+{{- range $p := .Site.AllPages -}}
+{{- range .Aliases }}
+{{ . }} {{ $p.RelPermalink -}}
+{{- end }}
+{{- end -}}

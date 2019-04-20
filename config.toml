@@ -3,9 +3,20 @@ languageCode = "en"
 title = "Rodolfo Carvalho"
 
 enableRobotsTXT = true
+disableAliases = true
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [outputs]
-home = ["HTML"]
+home = ["HTML", "REDIRECTS"]
 page = ["HTML"]
 section = ["HTML"]
+
+[outputFormats.REDIRECTS]
+mediatype = "text/netlify"
+baseName = "_redirects"
+isPlainText = true
+notAlternative = true
+
+[mediaTypes."text/netlify"]
+suffixes = [""]
+delimiter = ""
