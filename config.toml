@@ -3,3 +3,8 @@ languageCode = "en"
 title = "Rodolfo Carvalho"
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[outputs]
+home = ["HTML"]
+page = ["HTML"]
+section = ["HTML"]
