@@ -3,13 +3,15 @@
 {{- end }}
 
 {{ define "main" -}}
+{{ $options := "x256 Lanczos q90" }}
+{{ $img := (resources.Get "imgs/rodolfo_redhat_sq.jpg").Resize $options }}
 <div class="container">
   <div class="jumbotron">
     <h1 class="display-4">Hi, I am Rodolfo!</h1>
     <p class="lead">Thank you for your visit.</p>
   </div>
   <div class="d-md-flex flex-row-reverse justify-content-around">
-    <img class="rounded-lg" src="/imgs/rodolfo_redhat_sq.jpg" alt="Rodolfo Carvalho">
+    <img class="rounded-lg" src="{{ $img.Permalink }}" alt="Rodolfo Carvalho">
     <div id="links">
       <div class="d-flex flex-column justify-content-around h-100">
         <section>

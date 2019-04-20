@@ -22,10 +22,14 @@
 {{ end }}
 
 {{ define "main" }}
+{{ $options := "x200 Lanczos q90" }}
+{{ $img1 := (resources.Get "imgs/rodolfo_love.jpg").Resize $options }}
+{{ $img2 := (resources.Get "imgs/rodolfo_cycling.jpg").Resize $options }}
+{{ $img3 := (resources.Get "imgs/rodolfo_redhat.jpg").Resize $options }}
 <div class="container">
   <section class="row align-items-center">
     <div class="col-md-2 text-center">
-      <img class="rounded" src="/imgs/rodolfo_carvalho.jpg" alt="Rodolfo Carvalho">
+      <img class="rounded" src="{{ $img1.Permalink }}" alt="Rodolfo Carvalho">
     </div>
     <div class="col">
       <p>Rodolfo is a <a href="https://en.wikipedia.org/wiki/Escola_Polit%C3%A9cnica_da_UFRJ">Computer and
@@ -46,7 +50,7 @@
   </section>
   <section class="row align-items-center">
     <div class="col-md-2 text-center">
-      <img class="rounded" src="/imgs/cycling.jpg" alt="Rodolfo cycling">
+      <img class="rounded" src="{{ $img2.Permalink }}" alt="Rodolfo cycling">
     </div>
     <div class="col">
       <p>Rodolfo likes sports, nature, exploring cities in unconventional ways
@@ -63,7 +67,7 @@
   </section>
   <section class="row align-items-center">
     <div class="col-md-2 text-center">
-      <img class="rounded" src="/imgs/rodolfo_redhat.jpg" alt="Rodolfo Carvalho">
+      <img class="rounded" src="{{ $img3.Permalink }}" alt="Rodolfo Carvalho">
     </div>
     <div class="col">
       <p>Polyglot, loves coding in
