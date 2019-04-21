@@ -6,7 +6,7 @@ command = "hugo --minify --gc && go test ./test"
 HUGO_VERSION = "0.55.2"
 
 [context.deploy-preview]
-command = "hugo --minify --buildFuture -b $DEPLOY_PRIME_URL && go test ./test"
+command = "hugo --minify --gc --buildFuture -b $DEPLOY_PRIME_URL && go test ./test"
 
 [context.branch-deploy]
-command = "hugo --minify -b $DEPLOY_PRIME_URL && go test ./test"
+command = "hugo --minify --gc -b $DEPLOY_PRIME_URL && go test ./test"
