@@ -10,6 +10,7 @@
   {{- else -}}
     same-origin
   {{- end }}
+  Content-Security-Policy: default-src 'none'; img-src 'self' data: https://*.unsplash.com; style-src 'self' 'unsafe-inline' https://stackpath.bootstrapcdn.com https://use.fontawesome.com https://fonts.googleapis.com; font-src https://fonts.gstatic.com https://use.fontawesome.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; block-all-mixed-content
 
 {{- /*
   References:
@@ -17,4 +18,5 @@
   https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection
   https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
   https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy
+  https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 */ -}}
