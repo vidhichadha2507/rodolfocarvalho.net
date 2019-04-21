@@ -9,6 +9,7 @@ ROOT_DIR="$(dirname "$0")/.."
 PUBLIC_DIR="$ROOT_DIR/public"
 OUT_DIR="$(mktemp -d --tmpdir hugo-rodolfocarvalho.net-RELEASE-XXXX)"
 
+export CONTEXT="production"
 hugo -s "$ROOT_DIR" -d "$OUT_DIR" --gc "$@"
 rm -rf -- "$PUBLIC_DIR"
 mv --no-clobber -- "$OUT_DIR" "$PUBLIC_DIR"
