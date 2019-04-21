@@ -5,8 +5,8 @@
     </h3>
     <div class="card-body">
       {{ $class := "img-thumbnail" -}}
-      {{ $projectsRelURL := "/projects/" | relURL -}}
-      {{ replace .Content `<img src="` (printf `<img class="%s" src="%s` $class $projectsRelURL) | safeHTML }}
+      {{ $urlPrefix := "/projects/" | relURL -}}
+      {{ replace .Content `<img src="` (printf `<img class="%s" src="%s` $class $urlPrefix) | safeHTML }}
     </div>
   </div>
 </div>
