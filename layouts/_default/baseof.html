@@ -16,9 +16,9 @@
   <meta name="mobile-web-app-capable" content="yes"><!-- fullscreen from homescreen Android -->
   <meta name="apple-mobile-web-app-capable" content="yes"><!-- fullscreen from homescreen iOS -->
 
-  <link rel="icon" href="/favicon.ico">
-  <link rel="icon" sizes="192x192" href="/touch-icon.png"><!-- homescreen icon Android -->
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- homescreen icon iOS -->
+  <link rel="icon" href="{{ "/favicon.ico" | relURL }}">
+  <link rel="icon" sizes="192x192" href="{{ "/touch-icon.png" | relURL }}"><!-- homescreen icon Android -->
+  <link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | relURL }}"><!-- homescreen icon iOS -->
 
   <meta name="author" content="Rodolfo Henrique Carvalho">
   {{ if .Description }}<meta name="description" content="{{ .Description }}">{{ end }}
@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans%7CUbuntu">
-  <link rel="stylesheet" href="/custom.css">
+  <link rel="stylesheet" href="{{ "/custom.css" | relURL }}">
 
   {{ block "extra-head" . }}{{ end }}
 </head>
