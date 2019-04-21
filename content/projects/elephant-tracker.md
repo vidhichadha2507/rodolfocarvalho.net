@@ -10,5 +10,5 @@ tracker.
   <i class="fas fa-signal"></i><i class="fas fa-signal"></i><i class="fas fa-signal"></i>
 </p>
 
-It is a web server companion for [XMPPVOX](#project/xmppvox), keeping
+It is a web server companion for [XMPPVOX](#xmppvox), keeping
 information about how XMPPVOX is being used.

@@ -8,5 +8,5 @@ library.
 
 ![Directed Acyclic Word Graph example](images/dawgo.png)
 
-It is used in [Shenmeci](#project/shenmeci) to build the Chinese word
+It is used in [Shenmeci](#shenmeci) to build the Chinese word
 segmentation engine.
