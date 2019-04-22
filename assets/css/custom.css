@@ -1,9 +1,9 @@
 body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", var(--font-family-sans-serif);
 }
 
 p {
-  font-family: Ubuntu, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Ubuntu", var(--font-family-sans-serif);
 }
 
 .navbar-toggler {
