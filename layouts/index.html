@@ -45,23 +45,23 @@
 </div>
 
 <div class="container">
-  {{ $formName := "test-form::002" }}
+  {{ $formName := "test-form::003" }}
   <div class="card">
     <h5 class="card-header">Send me a message!</h5>
     <div class="card-body">
       <form name="{{ $formName }}" data-netlify="true" method="POST" action="{{ .RelPermalink }}">
         <div class="form-group">
           <label class="sr-only" for="feedback">Message</label>
-          <textarea class="form-control" id="feedback" name="feedback" rows="3" placeholder="Message" required></textarea>
+          <textarea class="form-control" id="feedback" name=feedback rows="3" placeholder="Message" required></textarea>
         </div>
         <div class="form-row">
           <div class="form-group col-md">
             <label class="sr-only" for="name">Name (optional)</label>
-            <input class="form-control" id="name" name="name" type="text" placeholder="Name (optional)">
+            <input class="form-control" id="name" name=name type="text" placeholder="Name (optional)">
           </div>
           <div class="form-group col-md">
             <label class="sr-only" for="email">Email (optional)</label>
-            <input class="form-control" id="email" name="email" type="email" aria-describedby="form-email-help" placeholder="Email (optional)">
+            <input class="form-control" id="email" name=email type="email" aria-describedby="form-email-help" placeholder="Email (optional)">
             <small class="form-text text-muted" id="form-email-help">I'll never share your email with anyone else, and may only use it to contact you directly regarding your message.</small>
           </div>
         </div>
