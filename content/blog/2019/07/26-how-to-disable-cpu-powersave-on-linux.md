@@ -10,6 +10,8 @@ date: 2019-07-26T16:36:29+02:00
 
 This is a mental note. Ensuring all CPUs are set to provide maximum performance is useful for example when running benchmarks.
 
+<!--more-->
+
 ## Step 1
 
 Check current CPU frequency:
